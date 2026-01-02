@@ -61,7 +61,7 @@ curve = go.Scatter3d(
 
 fig = go.Figure(data=[surface, plane, curve])
 fig.update_layout(
-    title="Laplace Transform of ODE Solution |Y(σ + iω)|",
+    title="Laplace Transform of ODE Solution",
     scene=dict(
         xaxis_title="σ",
         yaxis_title="ω",
@@ -72,7 +72,7 @@ fig.show()
 
 plt.figure(figsize=(8,4))
 plt.plot(omega_plane, slice_vals, color='red')
-plt.title(f'Slice of |Y(σ + iω)| at σ = {sigma_cut}')
+plt.title(f'Slice of ODE Solution at σ = {sigma_cut}')
 plt.xlabel('ω')
 plt.ylabel('|Y(σ + iω)|')
 plt.grid(True)
