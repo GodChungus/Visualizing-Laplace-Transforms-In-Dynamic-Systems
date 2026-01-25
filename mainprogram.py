@@ -5,6 +5,7 @@ from euler import euler
 from rk4 import rk4
 from laplace import compute_laplace, compute_inverse_laplace
 from odesolutions import solve_ode
+import laplacevisualize
 
 # ======================================================
 # Defining the symbols
@@ -44,7 +45,7 @@ Y_s_expr, Y_s_num = compute_laplace(y_exact_expr, t, s)
 y_ilaplace_expr, y_ilaplace_num = compute_inverse_laplace(Y_s_expr, s, t)
 y_ilaplace_vals = y_ilaplace_num(t_vals)
 
-s_vals = np.linspace(0, 10, 1000)
+s_vals = np.linspace(0, 5, 1000)
 Y_s_vals = Y_s_num(s_vals)
 
 plt.figure(figsize=(16, 10))
@@ -89,7 +90,7 @@ plt.legend()
 plt.grid()
 
 # Plotting Laplace Transform
-plt.subplot(3, 2, 5)
+plt.subplot(3, 2, 6)
 plt.plot(s_vals, Y_s_vals, color='blue')
 plt.title('Laplace Transform $Y(s)$')
 plt.xlabel('s')
@@ -97,7 +98,7 @@ plt.ylabel('Y(s)')
 plt.grid()
 
 # Plotting Inverse Laplace Transform
-plt.subplot(3, 2, 6)
+plt.subplot(3, 2, 5)
 plt.plot(t_vals, y_ilaplace_vals, label='Inverse Laplace', color='purple')
 plt.plot(t_vals, y_exact_vals, '--', label='Exact', color='black')
 plt.title('Inverse Laplace vs Exact')
@@ -108,3 +109,5 @@ plt.grid()
 
 plt.tight_layout()
 plt.show()
+
+laplacevisualize.run_laplace()
