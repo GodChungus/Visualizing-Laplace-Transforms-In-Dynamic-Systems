@@ -13,7 +13,7 @@ def compute_laplace(expr, t_symbol, s_symbol):
         Y_s_num: numerical version of Y_s
     """
     # Compute the Laplace Transform
-    Y_s = sp.laplace_transform(expr, t_symbol, s_symbol, noconds=True)
+    Y_s = sp.laplace_transform(expr, t_symbol, s_symbol, noconds=True) # noconds removes convergence conditions
 
     # Turn the symbolic Laplace Transform into a numerical function
     Y_s_num = sp.lambdify(s_symbol, Y_s, modules='numpy')
