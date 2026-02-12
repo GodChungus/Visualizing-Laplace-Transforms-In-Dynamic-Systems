@@ -6,4 +6,5 @@
     Python before, as last year(and this is available in my GitHub too) I made a Fourier Transform plotter in Python. The project description is basically all provided in the PDF file "Overview", so feel free to
     check it out. Also, documentation is provided in the code itself to make it as readable as possible.
   </p>
+  <h1><b>🥉UPDATE: I got third place!🥉</b></h1>
 </div>
