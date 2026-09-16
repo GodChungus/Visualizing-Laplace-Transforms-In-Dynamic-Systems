@@ -14,7 +14,7 @@
 
 This project is a computational exploration of the **Laplace Transform** and its application to solving and analyzing **ordinary differential equations (ODEs)**.
 
-The project was originally developed for a school exhibition held in **February 2026**, where it received **third place**. The goal was to combine mathematical theory with computational visualization, making concepts that are often difficult to visualize on paper more intuitive through interactive graphs and numerical comparisons.
+The project was originally developed for a school exhibition held in **February 2026**. The goal was to combine mathematical theory with computational visualization, making concepts that are often difficult to visualize on paper more intuitive through interactive graphs and numerical comparisons.
 
 The project uses **Python** as its primary language, taking advantage of libraries such as **SymPy**, **NumPy**, **Matplotlib**, and **Plotly** to perform symbolic mathematics, numerical computation, and visualization.
 
@@ -43,37 +43,37 @@ and compares numerical and analytical techniques for obtaining their solutions.
 
 The primary example used by the program is:
 
-\[
+$$
 \frac{dy}{dt} = \sin(3t) - 2y
-\]
+$$
 
 with the initial condition
 
-\[
+$$
 y(0)=0.
-\]
+$$
 
 This equation can be solved in several ways, allowing the project to demonstrate the differences between numerical approximation, exact symbolic solutions, and Laplace-domain methods.
 
 ### Laplace Transform
 
-For a function \(f(t)\), its Laplace Transform is defined as
+For a function $f(t)$, its Laplace Transform is defined as
 
-\[
+$$
 \mathcal{L}\{f(t)\}
 =
 \int_0^\infty e^{-st}f(t)\,dt.
-\]
+$$
 
-The transform converts a function from the **time domain** into the **complex frequency domain**. One of the major advantages of this transformation is that differentiation in the time domain can be converted into algebraic operations in the \(s\)-domain.
+The transform converts a function from the **time domain** into the **complex frequency domain**. One of the major advantages of this transformation is that differentiation in the time domain can be converted into algebraic operations in the $s$-domain.
 
 For example,
 
-\[
+$$
 \mathcal{L}\{y'(t)\}
 =
 sY(s)-y(0).
-\]
+$$
 
 This makes Laplace Transforms particularly useful for solving differential equations with initial conditions.
 
@@ -89,17 +89,17 @@ Euler's method provides a simple numerical approximation to the solution of an O
 
 Given
 
-\[
+$$
 \frac{dy}{dt}=f(t,y),
-\]
+$$
 
 the method approximates the next value using
 
-\[
+$$
 y_{n+1}=y_n+h f(t_n,y_n),
-\]
+$$
 
-where \(h\) is the step size.
+where $h$ is the step size.
 
 The implementation can be found in [`euler.py`](euler.py).
 
@@ -111,13 +111,13 @@ The project also implements the classical **fourth-order Runge-Kutta method (RK4
 
 For each time step, RK4 evaluates the differential equation at several points and combines these slopes using a weighted average:
 
-\[
+$$
 y_{n+1}
 =
 y_n+
 \frac{h}{6}
 (k_1+2k_2+2k_3+k_4).
-\]
+$$
 
 Compared with Euler's method, RK4 generally provides a much more accurate approximation for the same step size.
 
@@ -207,24 +207,24 @@ The project additionally includes a 3D visualization of the magnitude of the tra
 
 The complex variable is represented as
 
-\[
+$$
 s=\sigma+i\omega,
-\]
+$$
 
 where:
 
-- \(\sigma\) is the real component
-- \(\omega\) is the imaginary component
+- $\sigma$ is the real component
+- $\omega$ is the imaginary component
 
 The visualization plots
 
-\[
+$$
 |Y(s)|
-\]
+$$
 
 across a region of the complex plane.
 
-A vertical plane is then introduced at a chosen value of \(\sigma\), and its intersection with the surface is plotted separately. This provides a way of examining a **slice of the Laplace-domain function** while retaining the surrounding 3D context.
+A vertical plane is then introduced at a chosen value of $\sigma$, and its intersection with the surface is plotted separately. This provides a way of examining a **slice of the Laplace-domain function** while retaining the surrounding 3D context.
 
 The visualization is implemented in [`laplacevisualize.py`](laplacevisualize.py) using **Plotly**.
 
@@ -372,38 +372,7 @@ At a high level, the project follows this pipeline:
                 Compare with Exact
 ```
 
-Alongside this workflow, `laplacevisualize.py` evaluates \(Y(s)\) over a region of the complex plane and produces a 3D representation of its magnitude.
-
----
-
-## What I Learned
-
-This project was primarily an exercise in connecting mathematical theory with computational methods.
-
-Some of the main concepts explored during development were:
-
-- Symbolic computation with SymPy
-- Numerical ODE solving
-- Euler's method
-- The fourth-order Runge-Kutta method
-- Laplace and inverse Laplace Transforms
-- Complex-valued functions
-- Numerical evaluation of symbolic expressions
-- Mathematical visualization
-- Comparing analytical and numerical results
-- Structuring a larger Python project into reusable modules
-
-It also provided an opportunity to explore how an abstract mathematical transformation can be represented computationally and visualized in ways that are easier to interpret.
-
----
-
-## Exhibition Result
-
-The project was presented at my school's exhibition in **February 2026**.
-
-**🥉 The project received third place.**
-
-The exhibition was the original motivation for building the project, and the final result served as an opportunity to present mathematical concepts through an interactive computational demonstration.
+Alongside this workflow, `laplacevisualize.py` evaluates $Y(s)$ over a region of the complex plane and produces a 3D representation of its magnitude.
 
 ---
 
@@ -433,9 +402,9 @@ The project could calculate and visualize the error between Euler, RK4, and the 
 
 For example:
 
-\[
+$$
 E(t)=|y_{\text{numerical}}(t)-y_{\text{exact}}(t)|.
-\]
+$$
 
 ### Improved Interactivity
 
@@ -445,26 +414,12 @@ The visualization could be expanded with interactive controls for changing param
 - Initial conditions
 - Time interval
 - Number of numerical steps
-- The \(\sigma\)-slice used in the complex-plane visualization
+- The $\sigma$-slice used in the complex-plane visualization
 
 ### Convergence Analysis
 
 Another possible extension would be to demonstrate how numerical accuracy changes as the step size is reduced, providing a computational illustration of the convergence properties of Euler's method and RK4.
 
 ---
-
-## Acknowledgements
-
-This project was developed as a personal exploration of mathematical computing and was presented as part of my school's **2026 exhibition**.
-
-Special thanks to the teachers and organizers who made the exhibition possible.
-
----
-
-<div align="center">
-
-**Built with Python, mathematics, and a lot of plotting.**
-
-🥉 **3rd Place — 2026 School Exhibition**
 
 </div>
