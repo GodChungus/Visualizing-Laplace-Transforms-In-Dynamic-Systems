@@ -61,7 +61,7 @@ For a function $f(t)$, its Laplace Transform is defined as $\mathcal{L}\{f(t)\} 
 
 The transform converts a function from the **time domain** into the **complex frequency domain**. One of the major advantages of this transformation is that differentiation in the time domain can be converted into algebraic operations in the $s$-domain.
 
-For example, $\mathcal{L}\{y'(t)\} = sY(s)-y(0).$.
+For example, $\mathcal{L}\{y'(t)\} = sY(s)-y(0)$.
 
 This makes Laplace Transforms particularly useful for solving differential equations with initial conditions.
 
