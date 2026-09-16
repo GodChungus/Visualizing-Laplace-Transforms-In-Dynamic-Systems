@@ -99,13 +99,7 @@ The project also implements the classical **fourth-order Runge-Kutta method (RK4
 
 For each time step, RK4 evaluates the differential equation at several points and combines these slopes using a weighted average:
 
-$$
-y_{n+1}
-=
-y_n+
-\frac{h}{6}
-(k_1+2k_2+2k_3+k_4).
-$$
+$$y_{n+1} = y_n + \frac h6 (k_1 + 2k_2 + 3k_3 + k_4$$.
 
 Compared with Euler's method, RK4 generally provides a much more accurate approximation for the same step size.
 
