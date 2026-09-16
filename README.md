@@ -62,7 +62,7 @@ For a function $f(t)$, its Laplace Transform is defined as
 $$
 \mathcal{L}\{f(t)\}
 =
-\int_0^\infty e^{-st}f(t)\,dt.
+\int_0^\infty e^{-st}f(t)\,dt
 $$
 
 The transform converts a function from the **time domain** into the **complex frequency domain**. One of the major advantages of this transformation is that differentiation in the time domain can be converted into algebraic operations in the $s$-domain.
