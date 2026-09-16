@@ -35,9 +35,9 @@ The project is structured as several independent Python modules, each responsibl
 
 The project works with first-order ordinary differential equations of the form
 
-\[
+$$
 \frac{dy}{dt} = f(t,y)
-\]
+$$
 
 and compares numerical and analytical techniques for obtaining their solutions.
 
