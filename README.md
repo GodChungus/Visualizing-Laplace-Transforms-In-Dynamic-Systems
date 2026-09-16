@@ -4,8 +4,6 @@
 
 ### A Python-based exploration of Laplace Transforms, Ordinary Differential Equations, and numerical methods
 
-**🥉 3rd Place — School Exhibition, 2026**
-
 </div>
 
 ---
